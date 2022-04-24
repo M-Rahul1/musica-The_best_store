@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Musica!</title>
+    <link rel="stylesheet" href="login_register.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="login">
+        <div class="login-bg"></div>
+        <div class="login-bg-effect"></div>
+        <div class="login-form">
+          <p class="form_header">LOG IN </p>
+          <hr /><br/><br />
+
+          <label for="email"><b>Email</b></label><br/>
+          <input type="text" placeholder="Enter Email" name="email" /><br/><br/>
+
+          <label for="psw"><b>Password</b></label><br/>
+          <input
+            type="password"
+            placeholder="Enter Password"
+            name="psw"
+            required
+          /><br /><br/>
+            <p class="tc">
+              By creating an account you agree to our
+              <a href="t_and_c.html" style="color: dodgerblue">Terms & Privacy</a>.
+            </p>
+            <div class="butt-anim-div"></div>
+            <div class="login_butt_div">
+              <button type="submit" class="loginbtn"> Log in </button>
+            </div>
+        </div>
+      </div>
+
+      <div class="logo">
+        <div class="buttons">
+          <div class="login_button">
+            <p>New to Musica ?</p>
+            <button class="butt">Sign up</button>
+          </div>
+          <div class="register_button">
+            <p>Already have an account ?</p>
+            <button class="butt">Log in</button>
+          </div>
+        </div>
+        <img src="./logo.png" alt="Musica Logo" />
+        <p class="brand">MUSICA</p>
+        <p class="brand_tagline">Our music - Your melody !</p>
+      </div>
+
+      <div class="register">
+        <div class="register-bg"></div>
+        <div class="register-bg-effect"></div>
+        <form class="register-form">
+            <p class="form_header">SIGN UP </p>
+            <hr /><br/>
+                <div class="input-div">
+                  <div class="input-div-left">
+                    <label for="fname">First name </label> <br />
+                    <input  type="text" class="inputbox" name="myfname" id="fname" placeholder="Enter First name" >
+                  </div>
+                  <div class="input-div-right">
+                    <label for="lname">Last name </label> <br />
+                    <input type="text" class="inputbox" name="mylname" id="lname" placeholder="Enter Last name" >
+                   </div>
+                </div>
+
+                <div class="input-div">
+                  <div class="input-div-left">
+                    <label for="DOB">Date of Birth</label><br/>
+                    <input type="date" class="inputbox" name="dob" id="DOB" ><br/>
+                  </div>
+                  <div class="input-div-right">
+                    <label for="gender">Gender</label><br /><br/>
+                    <input type="radio"class="inputbox" name="user_gender" id="gender" value="male" >&nbsp;male &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio"class="inputbox" name="user_gender" id="gender" value="female" >&nbsp;female<br/><br />
+                  </div>
+                 </div>
+            
+                <label for="email_or_mobile">Email </label> <br/>
+                <input type="email"class="inputbox" name="user_email_or_mobile" id="email_or_mobile" placeholder="@gmail.com" ><br/>
+
+                <label for="pwd">Password </label> <i style="font-size: 16px; position: relative; top: 3px; right: 16px;" class="material-icons info-icon">info</i></a> 
+                   <span class="pwdvisibility" style="float: right; font-size: 12px; position: relative; top: 8px; right: 16px;">SHOW</span> <br/>
+                <input type="password" class="inputbox" name="pwd" id="pwd" ><br/>
+
+                <div class="pwdvalidation">
+                  <ul>
+                    <li> must contain atleast 6 characters. </li>
+                    <li> must contain atleast one special character. </li>
+                    <li> must contain atleast one digit. </li>
+                  </ul>
+                </div>
+            
+                <div class="tandc">
+                  <input type="checkbox" class="inputbox" >
+                  <label for="x">I agree to all the <a href="t_and_c.html">terms and conditions</a> of Musica</label>
+                </div>
+                
+            
+            <br>
+            <div class="butt-anim-div"></div>
+            <div class="register_butt_div">
+             <button type="submit" class="registerbtn"> Create an account </button>
+            </div>
+        </form>
+      </div>
+    </div>
+    <div class="alert-container">
+       <div class="alert">
+         <p class="alertcontent"> </p>
+         <div class="progress"></div>
+       </div>
+    </div>
+
+    <script src="/login_register.js"></script> 
+  </body>
+</html>

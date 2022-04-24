@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Josefin+Sans:wght@600&family=Josefin+Sans:wght@200&family=Montserrat&family=Nunito:wght@200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow: hidden;
+}
+
+.main-container{
+    width: 160vw;
+    height: 100vh;
+    display: flex;
+}
+
+.scroll-left{
+    transform: translateX(-60vw);
+    transition: 0.8s ease-in;
+}
+
+.scroll-right{
+    transform: translateX(0);
+    transition: 0.8s ease-in;
+}
+
+hr{
+    border: 1px solid grey;
+}
+
+
+/* ====================================================== login, register form ====================================== */
+
+.login, .register{
+    width: 60vw;
+    height: 100%;
+    position: relative;
+}
+
+@keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-60vw);
+    }
+  }
+
+
+.login-bg, .register-bg{
+    width: 310%;
+    height: 100%;
+    position: absolute;
+    background: url('/bg.webp');
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+    animation: slide 60s linear infinite;
+}
+
+.login-bg-effect, .register-bg-effect{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #582691;
+    opacity: 0.2;   
+}
+
+.login-form, .register-form{
+    box-sizing: border-box;
+    position: absolute;
+    width: 450px;
+    height: 440px; 
+    background-color: rgba(255,255,255,0.94);
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color:#582691;
+    border-radius: 10px;
+    box-shadow: 1px 1px 19px 15px rgba(0,0,0,0.5) ;
+    font-family: 'Josefin Sans';
+    font-weight: bolder;
+    padding: 14px;
+    z-index: 10;
+}
+
+.register-form{
+    width: 500px;
+    height: 550px;
+}
+
+.form_header{
+    text-align: center;
+    padding: 14px 0;
+    font-size: 1.5em;
+    font-weight: 800;
+}
+
+.login label, .login .tc, .register label{
+    font-size: 15px;
+    margin-right: 24px;
+}
+
+.tc{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 38px;
+}
+
+.tandc{
+    margin-bottom: 4px;
+}
+
+.login input, .register input[type="text"], .register input[type="email"], .register input[type="date"], .register input[type="password"]{
+    width: 96%;
+    margin: 4px 0 16px 0;
+    height: 32px;
+    padding-left: 8px;
+    font-family: 'Nunito';
+    font-size: 12px;
+    border: 1px solid grey;
+    border-radius: 4px;
+}
+
+#pwd{
+    margin-bottom: 4px;
+}
+
+.register input[type="email"]::placeholder{
+    text-align: end;
+    padding-right: 24px;
+}
+
+.input-div{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.input-div-left, .input-div-right{
+    width: 100%;
+}
+
+.input-div-right{
+    padding-left: 24px;
+}
+
+.pwdvalidation{
+    width: 98%;
+    box-shadow: 0.2px 0.2px 6px 2px rgba(0,0,0,0.1);
+    height: 64px;
+    margin-bottom: 14px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.6s;
+    background-color: #e4d6f5;
+    font-size: small;
+    box-sizing: border-box;
+    padding: 8px 24px;
+    line-height: 16px;
+}
+
+#pwd.invalidpwd:focus{
+    outline-color: red;
+}
+
+#pwd.validpwd:focus{
+    outline-color: green;
+}
+
+.info-icon:hover, .pwdvisibility:hover {
+    cursor: pointer;
+}
+
+
+.show-info-box{
+    opacity: 1;
+}
+
+.butt-anim-div{
+    position: absolute;
+    width: 0;
+    background-color: #582691;
+    height: 32px;
+    border-radius: 4px;
+    transition: width 0.5s;
+}
+
+.loginbtn, .registerbtn{
+    width: 100%;
+    height: 32px;
+    border-radius: 4px;
+    border: 1.4px solid #582691;;
+    background-color: transparent;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    color: #582691;
+}
+
+.login_butt_div, .register_butt_div{
+    position: absolute;
+    width: calc(100% - 24px);
+}
+
+.btnanim{
+    width: calc(100% - 24px);
+}
+
+.loginbtn:hover, .registerbtn:hover{
+    cursor: pointer;
+    color: white;
+}
+
+/* ====================================================== logo ====================================== */
+
+
+.logo{
+    width: 40vw;
+    height: 100%;
+    background-color: rgba(255,255,255,0.9);
+    box-shadow: -30px 0 10px 5px rgba(255,255,255,0.9), 30px 0 10px 5px rgba(255,255,255,0.9) ;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.logo .brand{
+    font-size: 2em;
+    letter-spacing: 2px;
+    font-family: 'Montserrat';
+    font-weight: bolder;
+}
+
+.brand_tagline{
+    font-size: 14px;
+    margin-top: 4px;
+    font-family: 'Montserrat';
+    letter-spacing: 2px;
+}
+
+/* ====================================================== login, register buttons ====================================== */
+
+.buttons{
+    width: 103%;
+    top: -60px;
+}
+
+.buttons .login_button{
+    transition: background-color 1s, width 0.5s, color 1s;
+    border: 2px solid #F58319;
+    border-radius: 10px;
+    width: 220px;
+    float: right;
+    padding-right: 42px;
+    height: 42px;
+    display: flex;
+    padding-left: 28px;
+    align-items: center;
+    justify-content: flex-end;
+    font-family: 'Nunito';
+    font-weight: bold;
+    color: gray;
+    position: absolute;
+    top: 32px;
+    right: 0;
+}
+
+.login_button .butt, .register_button .butt{
+    text-decoration: none;
+    font-family: 'Nunito';
+    font-size: 21px;
+    background-color: transparent;
+    border: none;
+    margin-left: 24px;
+    color: #582691;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.butt:hover{
+    cursor: pointer;
+    border-bottom: 1px solid white;
+    transform: translateY(-2px);
+}
+
+.login_button:hover{
+    background-color: #F58319;
+    width: 260px;
+    color: white;
+}
+
+
+.buttons .register_button{
+    transition: background-color 1s, width 0.5s, color 1s;
+    border: 2px solid #F58319;
+    border-radius: 10px;
+    width: 320px;
+    height: 42px;
+    display: flex;
+    padding-left: 28px;
+    align-items: center;
+    font-family: 'Nunito';
+    font-weight: bold;
+    color: gray;
+    position: absolute;
+    top: 32px;
+    display: none;
+}
+
+.register_button:hover{
+    background-color: #F58319;
+    width: 340px;
+    color: white;
+}
+
+/* ====================================================== custom alert box ====================================== */
+.alert-container{
+    position: absolute;
+    width: 100%;
+    top:0;
+    height: 100vh;
+    z-index: 999;
+    transform: translateY(-100vh);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.alert-drop{
+    animation: drop 0.7s ease-in both;
+}
+
+.alert-lift{
+    animation: lift 0.7s ease-in both;
+}
+
+.alert{
+    width: 450px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 20px 4px rgba(0,0,0,0.5);
+    top:0;
+    height: 60px;
+    background-color: snow;
+    border: 1px solid gray;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: 24px;
+    box-sizing: border-box;
+    padding-bottom: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
+    background-color: #D4DEF5;
+    color: #582691;
+}
+
+.alert .progress{
+    width: 0%;
+    background-color: #582691;
+    height: 4px;
+    border-radius: 8px;
+    margin-top: 12px;
+}
+
+.alert .progressing{
+    animation: progress 5s 0.8s linear;
+}
+
+.alert .alertcontent{
+    font-size: 14px;
+    font-family: 'Montserrat';
+    font-weight: bolder;
+    letter-spacing: 0.8px;
+}
+
+@keyframes drop {
+    70% {
+        transform: translateY(10px);
+      }
+      80%{
+        transform: translateY(-6px);
+      }
+      90%{
+        transform: translateY(6px);
+      }
+      95%{
+        transform: translateY(-4px);
+      }
+      98%{
+        transform: translateY(2px);
+      }
+      100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes lift {
+    0% {
+        transform: translateY(0px);
+    }
+    20% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(-100vh);
+    }
+}
+
+@keyframes progress {
+    100% { width : 100%; }
+}
